@@ -8,14 +8,20 @@ const FilingSchema = new Schema({
         type: String,
         required: true,
     },
-    price: {
-        type: Number,
+    email: {
+        type: String,
         required: true,
     },
-    type_of_filling: {
+    phone_number: {
+        type: Number
+    },
+    address: {
+        type: String
+    },
+    client_type: {
         type: String,
         required: true
     },
 }, { timestamps: true });
 
-module.export = mongoose.Model('Filing', FilingSchema);
+module.export = mongoose.model('Filing', FilingSchema);

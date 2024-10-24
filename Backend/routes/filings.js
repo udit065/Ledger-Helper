@@ -1,4 +1,5 @@
 const express = require('express');
+const Filing = require('../models/FilingModel')
 const router = express.Router();
 
 //NOTE - GET
@@ -12,12 +13,21 @@ router.get('/:id', (req, res) => {
 })
 
 //NOTE - POST
-router.post('/', (req, res) => {
-    res.json({ msg: "POST All Filings" })
+router.post('/', async (req, res) => {
+    const { name, email, phone_number, address, client_type } = req.body
+
+    try {
+        const filingData = await Filing.create({ name, email, phone_number, address, client_type });
+        res.status(200).json(filingData)
+    } catch (error) {
+        res.status(400).json({ error: error.message })
+    }
+
+    // res.json({ msg: "POST a New Filing" })
 })
 //NOTE - DELETE
 router.delete('/:id', (req, res) => {
-    res.json({ msg: "DELETE All Filings" })
+    res.json({ msg: "DELETE a Filings" })
 })
 
 //NOTE - PATCH
