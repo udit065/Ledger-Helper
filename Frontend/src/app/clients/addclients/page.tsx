@@ -1,78 +1,76 @@
-export default function addClient() {
+export default function AddClient() {
     return (
         <>
-            {/* <div>
-
-            </div> */}
-            <div className="mt-4 flex flex-col bg-gray-100 rounded-lg p-4 shadow-sm ml-80 w-[40%] ">
-                <h2 className="text-black font-bold text-lg">Add Client htmlForm</h2>
-
-                <div className="mt-4">
-                    <label className="text-black" htmlFor="name">Name</label>
-                    <input placeholder="Your name" className="w-full bg-white rounded-md border-gray-300 text-black px-2 py-1" type="text" />
+            <form className="px-7 h-screen grid justify-center items-center">
+                <div className="mb-4">
+                    <label className="block text-sm font-bold mb-2" htmlFor="clientName">
+                        Client Name
+                    </label>
+                    <input
+                        className="w-full p-2 rounded-md text-black"
+                        id="clientName"
+                        type="text"
+                        placeholder="Enter client name"
+                    />
                 </div>
 
-                <div className="mt-4">
-                    <label className="text-black" htmlFor="address">Address</label>
-                    <textarea placeholder="Your address" className="w-full bg-white rounded-md border-gray-300 text-black px-2 py-1" id="address"></textarea>
+                <div className="mb-4">
+                    <label className="block text-sm font-bold mb-2" htmlFor="email">
+                        Email
+                    </label>
+                    <input
+                        className="w-full p-2 rounded-md text-black"
+                        id="email"
+                        type="email"
+                        placeholder="Enter client email"
+                    />
                 </div>
 
-                <div className="mt-4 flex flex-row space-x-2">
-                    <div className="flex-1">
-                        <label className="text-black" htmlFor="city">City</label>
-                        <input placeholder="Your city" className="w-full bg-white rounded-md border-gray-300 text-black px-2 py-1" id="city" type="text" />
-                    </div>
-
-                    <div className="flex-1">
-                        <label className="text-black" htmlFor="state">State</label>
-                        <input placeholder="Your state" className="w-full bg-white rounded-md border-gray-300 text-black px-2 py-1" id="state" type="text" />
-                    </div>
+                <div className="mb-4">
+                    <label className="block text-sm font-bold mb-2" htmlFor="phone">
+                        Phone Number
+                    </label>
+                    <input
+                        className="w-full p-2 rounded-md text-black"
+                        id="phone"
+                        type="tel"
+                        placeholder="Enter phone number"
+                    />
                 </div>
 
-                <div className="mt-4 flex flex-row space-x-2">
-                    <div className="flex-1">
-                        <label className="text-black" htmlFor="zip">ZIP</label>
-                        <input placeholder="Your ZIP code" className="w-full bg-white rounded-md border-gray-300 text-black px-2 py-1" id="zip" type="text" />
-                    </div>
-
-                    <div className="flex-1">
-                        <label className="text-black" htmlFor="country">Filling</label>
-                        <select className="w-full bg-white rounded-md border-gray-300 text-black px-2 py-1" id="country">
-                            <option value="">Select a Filling</option>
-
-                            <optgroup label="Africa">
-                                <option value="AF">Afghanistan</option>
-                                <option value="DZ">Algeria</option>
-                                <option value="AO">Angola</option>
-                                ...
-                                <option value="ZW">Zimbabwe</option>
-                            </optgroup>
-
-                            <optgroup label="Asia">
-                                <option value="AM">Armenia</option>
-                                <option value="AZ">Azerbaijan</option>
-                                <option value="BH">Bahrain</option>
-                                ...
-                                <option value="YE">Yemen</option>
-                            </optgroup>
-
-                            <optgroup label="South America">
-                                <option value="AR">Argentina</option>
-                                <option value="BO">Bolivia</option>
-                                <option value="BR">Brazil</option>
-                                ...
-                                <option value="VE">Venezuela</option>
-                            </optgroup>
-
-                            ...
-                        </select>
-                    </div>
+                <div className="mb-4">
+                    <label className="block text-sm font-bold mb-2" htmlFor="address">
+                        Address
+                    </label>
+                    <input
+                        className="w-full p-2 rounded-md text-black"
+                        id="address"
+                        type="text"
+                        placeholder="Enter address"
+                    />
                 </div>
 
-                <div className="mt-4 flex justify-end">
-                    <button className="bg-white text-black rounded-md px-4 py-1 hover:bg-gray-200 hover:text-gray-900" type="submit">Submit</button>
+                <div className="mb-4">
+                    <label className="block text-sm font-bold mb-2" htmlFor="clientType">
+                        Client Type
+                    </label>
+                    <select
+                        className="w-full p-2 rounded-md text-black"
+                        id="clientType"
+                    >
+                        <option value="">Select client type</option>
+                        <option value="individual">Individual</option>
+                        <option value="business">Business</option>
+                    </select>
                 </div>
-            </div>
+
+                <button
+                    type="submit"
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md"
+                >
+                    Add Client
+                </button>
+            </form>
         </>
     );
 }
