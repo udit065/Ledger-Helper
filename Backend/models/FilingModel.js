@@ -24,4 +24,4 @@ const FilingSchema = new Schema({
     },
 }, { timestamps: true });
 
-module.export = mongoose.model('Filing', FilingSchema);
+module.exports = mongoose.model('Filing', FilingSchema);
